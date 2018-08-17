@@ -1,13 +1,11 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: pvc1
-  annotations:
-    volume.beta.kubernetes.io/storage-class: thin-disk
+  name: thin-claim
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
-
+      storage: 8Gi
+  storageClassName: thin-disk
